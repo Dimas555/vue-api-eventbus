@@ -1,0 +1,41 @@
+{
+  "name": "vue-api-eventbus",
+  "version": "1.0.0",
+  "description": "global event bus and axios instances",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dimas555/vue-api-eventbus.git"
+  },
+  "files": [
+    "lib/index.js"
+  ],
+  "keywords": [
+    "vue",
+    "event",
+    "eventbus",
+    "axios",
+    "interceptor"
+  ],
+  "author": "d.smirnov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dimas555/vue-api-eventbus/issues"
+  },
+  "homepage": "https://github.com/Dimas555/vue-api-eventbus#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^6.0.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
+  }
+}
