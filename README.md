@@ -4,7 +4,7 @@
 
 #### Installation
 ````
-npm install --save-dev vue-api-eventbus
+npm install vue-api-eventbus
 ````
 
 ##### main.js
