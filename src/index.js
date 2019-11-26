@@ -28,7 +28,6 @@ export default {
     const apiEventBus = new Vue();
     const apiService = axios.create(xhr);
     apiService.interceptors.request.use((conf) => {
-      console.log('before-request');
       apiEventBus.$emit(events.beforeRequest);
       if (!count) {
         apiEventBus.$emit(events.poolCreate);
@@ -42,7 +41,6 @@ export default {
       if (!count) {
         apiEventBus.$emit(events.poolRemove);
       }
-      console.log('request-error');
       apiEventBus.$emit(events.requestError);
       return Promise.reject(error);
     });
@@ -52,7 +50,6 @@ export default {
       if (!count) {
         apiEventBus.$emit(events.poolRemove);
       }
-      console.log('after-response');
       apiEventBus.$emit(events.afterResponse);
       return response;
     }, (error) => {
@@ -61,7 +58,6 @@ export default {
       if (!count) {
         apiEventBus.$emit(events.poolRemove);
       }
-      console.log('response-error');
       apiEventBus.$emit(events.responseError);
       return Promise.reject(error);
     });
